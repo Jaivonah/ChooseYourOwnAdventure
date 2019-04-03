@@ -2,45 +2,116 @@
 
 var game = {
     music: "98_Lost_Mine.mp3",
-    background_image: "intro-bg.jpg",
+    background_image: "photo.jpg",
+
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You wake up and start a New Day",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Go to School",
+                    nextLevel: "School",
+
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Skip School",
+                    nextLevel: "Mall",
                 },
             ]
         },
 
-        cave: {
-            background_image: "fire.gif",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+        School: {
+            background_image: "school.jpg",
+            music: "",
+            message: "you made it to school!",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Go to class",
+                    nextLevel: "Class",
+
                 },
+           {text:"pull the fire alarm",
+           nextLevel:"principal",
+
+},
+
+
             ]
+
+
         },
 
-        field: {
-            message: "Some adventurer you are...",
-            choices: [
+        Mall:{background_image: "mall.jpg",
+            music: "",
+            message: "At the mall",
+            choices:[
+                {text:"steal",
+                nextLevel:"arrested",
+
+                },
                 {
-                    text: "Start over",
-                    nextLevel: "start",
-                },
-            ]
+                 text:"buy",
+                nextLevel:"buy",
+                }
+                ]
         },
 
-    }
+        arrested:{background_image: "jail.jpg",
+            music: "",
+            message: "You got caught and went to jail",
+            choices:[
+                {text:"oh boy, start over!",
+                nextLevel:"start",
+
+                }
+                ]
+        },
+        buy:{background_image: "bags.jpeg",
+            music: "",
+            message: "You won!!!",
+            choices:[
+                {text:"start over",
+                nextLevel:"start",
+                }
+
+                ]
+
+     },
+
+
+
+
+        principal:{background_image: "",
+            music: "",
+            message: "You got caught",
+            choices: [
+                {text:"better luck next time ",
+                nextLevel:"start",
+
+                }
+        ]
+        },
+
+     Class: {background_image:"",
+        music:"",
+        message: "booo you goodie two shoes",
+        choices:[
+            {
+                text:"start",
+                nextLevel:"start",
+            }
+
+
+
+            ]
+
+
+
+
+},
+
+ }
+
 };
